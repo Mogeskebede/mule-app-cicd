@@ -18,9 +18,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <!-- Add your Mule dependencies here -->
-    </dependencies>
+    <!-- Add MuleSoft repositories -->
+    <repositories>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -30,16 +41,11 @@
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <!-- Disable Exchange usage -->
                     <exchangePublication>false</exchangePublication>
-
                     <cloudHub2Deployment>
                         <applicationName>mule-app-cicd</applicationName>
                         <target>Cloudhub-US-East-2</target>
                         <runtimeVersion>4.10.1</runtimeVersion>
-                        <!-- Optional: specify workers if needed -->
-                        <!--<workerType>Micro</workerType>-->
-                        <!--<workers>1</workers>-->
                     </cloudHub2Deployment>
                 </configuration>
             </plugin>
