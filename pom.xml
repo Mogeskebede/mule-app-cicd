@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- Add MuleSoft repositories -->
+    <!-- MuleSoft repositories -->
     <repositories>
         <repository>
             <id>mulesoft-releases</id>
@@ -33,6 +33,20 @@
         </repository>
     </repositories>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
     <build>
         <plugins>
             <plugin>
@@ -41,11 +55,15 @@
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <exchangePublication>false</exchangePublication>
                     <cloudHub2Deployment>
                         <applicationName>mule-app-cicd</applicationName>
                         <target>Cloudhub-US-East-2</target>
-                        <runtimeVersion>4.10.1</runtimeVersion>
+                        <businessGroupId>12c93125-f14c-4b34-9b01-f6d34451f9bb</businessGroupId>
+                        <runtimeVersion>${mule.version}</runtimeVersion>
+                        <workers>1</workers>
+                        <workerSize>0.1 vCores</workerSize>
+                        <region>US-East-2</region>
+                        <vCoreWorkerSize>0.1</vCoreWorkerSize>
                     </cloudHub2Deployment>
                 </configuration>
             </plugin>
