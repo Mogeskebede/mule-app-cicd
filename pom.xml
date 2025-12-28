@@ -6,9 +6,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mycompany</groupId>
+    <groupId>12c93125-f14c-4b34-9b01-f6d34451f9bb</groupId>
     <artifactId>mule-app-cicd</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule-application</packaging>
 
     <name>mule-app-cicd</name>
