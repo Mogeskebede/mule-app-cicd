@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>12c93125-f14c-4b34-9b01-f6d34451f9bb</groupId>
+	<groupId>${business.id}</groupId>
 	<artifactId>mule-app-cicd</artifactId>
 	<version>1.4.0</version>
 	<packaging>mule-application</packaging>
 
-	<name>mule-app-cicd</name>
+	<name>${app-name}</name>
 	<description/>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,13 +35,13 @@
 				<configuration>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<environment>Sandbox</environment>
-						<businessGroupId>12c93125-f14c-4b34-9b01-f6d34451f9bb</businessGroupId>
+						<environment>${anypoint.environment}</environment>
+						<businessGroupId>${business.id}</businessGroupId>
 						<target>Cloudhub-US-East-2</target>
 						<provider>MC</provider>
 						<username>${anypoint.username}</username>
                         <password>${anypoint.password}</password>
-						<applicationName>mule-app-cicd</applicationName>
+						<applicationName>${app-name}</applicationName>
 						<releaseChannel>Edge</releaseChannel>
 						<muleVersion>4.10.1</muleVersion>
 						<replicas>1</replicas>
