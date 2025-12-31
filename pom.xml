@@ -4,7 +4,7 @@
 
 	<groupId>${business.id}</groupId>
 	<artifactId>mule-app-cicd</artifactId>
-	<version>1.4.0</version>
+	<version>${revision}</version>
 	<packaging>mule-application</packaging>
 
 	<name>${app-name}</name>
@@ -73,7 +73,7 @@
 	<repositories>
 		<repository>
 			<id>anypoint-exchange-v3</id>
-			<name>Anypoint Exchange</name>
+			<name>AnypointExchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
