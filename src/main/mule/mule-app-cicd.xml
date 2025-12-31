@@ -17,7 +17,8 @@ output application/json
 ---
 {
  "status": "200",
- "message": "Deployed through Jenkins"	
+ "message": "Deployed through Jenkins",
+ "version": "v2"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
