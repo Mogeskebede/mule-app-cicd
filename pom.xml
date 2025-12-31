@@ -4,7 +4,7 @@
 
 	<groupId>${business.id}</groupId>
 	<artifactId>mule-app-cicd</artifactId>
-	<version>${revision}</version>
+	<version>4.1.11</version>
 	<packaging>mule-application</packaging>
 
 	<name>${app-name}</name>
